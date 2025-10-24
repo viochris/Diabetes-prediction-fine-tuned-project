@@ -18,7 +18,7 @@ with st.form("prediction_form"):
   skin_thickness = st.number_input("📏 Skin Thickness", min_value=0.0, value=35.0, step=0.1)
   insulin = st.number_input("💉 Insulin Level", min_value=0.0, value=168.0, step=0.1)
   bmi = st.number_input("⚖️ Body Mass Index (BMI)", min_value=0.0, value=43.1, step=0.1)
-  dpf = st.number_input("🧬 Diabetes Pedigree Function (DPF)", min_value=0.0, value=2.288, step=0.001)
+  dpf = st.number_input("🧬 Diabetes Pedigree Function (DPF)", min_value=0.0, value=2.288, step=0.1)
   age = st.number_input("📅 Age", min_value=0, max_value=120, value=33, step=1)
 
   submitted = st.form_submit_button("🚀 Predict")
