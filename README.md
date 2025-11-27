@@ -50,7 +50,7 @@ The project is structured for scalability, separating the research notebook from
   * **Model Engine:** XGBoost Classifier
   * **Data Processing:** Pandas, NumPy, Joblib
   * **Imbalanced Data:** Imbalanced-learn (SMOTE)
-  * **Environment:** Python 3.x
+  * **Environment:** Python 3.9+
 
 ## 📊 Performance Results
 
