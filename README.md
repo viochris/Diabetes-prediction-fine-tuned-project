@@ -56,9 +56,9 @@ The project is structured for scalability, separating the research notebook from
 
 By utilizing **GridSearchCV** with `scoring='recall'`, the fine-tuned XGBoost model achieved:
 
-  * **Optimization Goal:** Maximizing Sensitivity (Recall).
-  * **Outcome:** The tuned XGBoost model demonstrated superior capability in identifying positive diabetes cases compared to the baseline Random Forest model.
-  * **Validation:** Verified via Stratified K-Fold Cross Validation to ensure consistency across different data subsets and maintain class balance.
+  * **Optimization Goal**: Maximizing Sensitivity (Recall).
+  * **Outcome**: The tuned XGBoost model is optimized to effectively detect positive diabetes cases, prioritizing the reduction of False Negatives.
+  * **Validation**: Verified via Stratified K-Fold Cross Validation to ensure consistency across different data subsets and maintain class balance.
 
 ## 🚀 Installation & Usage
 
