@@ -54,11 +54,8 @@ if submitted:
   input_value = preprocess_input(pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, dpf, age)
   
   # Run prediction using the loaded artifacts
-  prediction = predict(model_rf, scaler, input_value)
+  prediction, conf = predict(model_rf, scaler, input_value)
   
-  # Map binary result to readable label
-  result = "🟥 Diabetic" if prediction == 1 else "🟩 Non-Diabetic"
-
   # ==========================================
   # 5. Display Results
   # ==========================================
@@ -70,6 +67,6 @@ if submitted:
   # - Class 1 (Diabetes): Use RED (st.error) to indicate health risk/alert.
   # - Class 0 (Healthy): Use GREEN (st.success) to indicate normal condition.
   if prediction == 1:
-      st.error(f"**Prediction:** {result}, Confidence: {conf[0]:.2%}")
+      st.error(f"**Prediction:** {result}, Confidence: {conf:.2%}")
   else:
-      st.success(f"**Prediction:** {result}, Confidence: {conf[0]:.2%}")
+      st.success(f"**Prediction:** {result}, Confidence: {conf:.2%}")
