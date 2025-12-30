@@ -60,11 +60,16 @@ if submitted:
   result = "🟥 Diabetic" if prediction == 1 else "🟩 Non-Diabetic"
 
   # ==========================================
-  # 5. Result Display
+  # 5. Display Results
   # ==========================================
   st.markdown("---")
   st.subheader("🔎 Prediction Result")
   st.write(f"**Name:** {name if name else 'N/A'}")
-  
-  # Conditional formatting for result message (Error color for Positive, Success color for Negative)
-  _ = st.error(f"**Prediction:** {result}") if prediction == 1 else st.success(f"**Prediction:** {result}")
+    
+  # Display dynamic feedback based on the diagnosis:
+  # - Class 1 (Diabetes): Use RED (st.error) to indicate health risk/alert.
+  # - Class 0 (Healthy): Use GREEN (st.success) to indicate normal condition.
+  if prediction == 1:
+      st.error(f"**Prediction:** {result}, Confidence: {conf:.2%}")
+  else:
+      st.success(f"**Prediction:** {result}, Confidence: {conf:.2%}")
