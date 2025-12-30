@@ -70,6 +70,6 @@ if submitted:
   # - Class 1 (Diabetes): Use RED (st.error) to indicate health risk/alert.
   # - Class 0 (Healthy): Use GREEN (st.success) to indicate normal condition.
   if prediction == 1:
-      st.error(f"**Prediction:** {result}, Confidence: {conf:.2%}")
+      st.error(f"**Prediction:** {result}, Confidence: {conf[0]:.2%}")
   else:
-      st.success(f"**Prediction:** {result}, Confidence: {conf:.2%}")
+      st.success(f"**Prediction:** {result}, Confidence: {conf[0]:.2%}")
