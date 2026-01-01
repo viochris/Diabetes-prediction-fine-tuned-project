@@ -65,14 +65,14 @@ By utilizing **GridSearchCV** with `scoring='recall'`, the fine-tuned XGBoost mo
 1.  **Clone the Repository**
 
     ```bash
-    git clone [https://github.com/viochris/Diabetes-prediction-fine-tuned-project.git](https://github.com/viochris/Diabetes-prediction-fine-tuned-project.git)
+    git clone https://github.com/viochris/Diabetes-prediction-fine-tuned-project.git
     cd Diabetes-prediction-fine-tuned-project
     ```
 
 2.  **Install Dependencies**
 
     ```bash
-    pip install streamlit xgboost scikit-learn pandas numpy joblib imbalanced-learn
+    pip install -r requirements.txt
     ```
 
 3.  **Run the Dashboard**
